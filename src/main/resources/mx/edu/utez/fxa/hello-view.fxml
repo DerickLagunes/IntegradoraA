@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mx.edu.utez.fxa.HelloController">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="286.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c4ffde" height="406.0" layoutX="-2.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="290.0" />
+            <Label fx:id="titulo" layoutX="99.0" layoutY="167.0" text="SISA">
+               <font>
+                  <Font name="Droid Sans Bold" size="42.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="217.0" text="Sistema Integral de Servicios Académicos" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="44.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/UtezLogo.png" />
+               </image>
+            </ImageView>
+            <Line endX="100.0" layoutX="144.0" layoutY="238.0" startX="-100.0" />
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="313.0" style="-fx-background-color: #deadde;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="login" layoutX="130.0" layoutY="249.0" mnemonicParsing="false" onAction="#login" text="Login" />
+            <Button fx:id="registrar" layoutX="130.0" layoutY="286.0" mnemonicParsing="false" text="Registrar" />
+            <PasswordField fx:id="password" layoutX="149.0" layoutY="188.0" />
+            <TextField fx:id="user" layoutX="149.0" layoutY="134.0" />
+            <Label layoutX="37.0" layoutY="138.0" text="Usuario:" />
+            <Label layoutX="27.0" layoutY="192.0" text="Contraseña:" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
