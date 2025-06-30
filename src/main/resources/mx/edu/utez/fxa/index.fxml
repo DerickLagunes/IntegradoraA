@@ -14,7 +14,7 @@
                   <TextField fx:id="alumnoNombre" />
                   <TextField fx:id="alumnoMatricula" />
                   <TextField fx:id="alumnoEdad" />
-                  <Button fx:id="AlumnoBoton" mnemonicParsing="false" onAction="#registrarAlumno" text="Registrar">
+                  <Button fx:id="alumnoBoton" mnemonicParsing="false" onAction="#registrarAlumno" text="Registrar">
                      <VBox.margin>
                         <Insets top="10.0" />
                      </VBox.margin>
@@ -30,6 +30,11 @@
                         <Insets top="30.0" />
                      </VBox.margin>
                   </TableView>
+                  <Button fx:id="alumnoBorrar" disable="true" mnemonicParsing="false" onAction="#borrarAlumno" text="Borrar Selección">
+                     <VBox.margin>
+                        <Insets left="200.0" />
+                     </VBox.margin>
+                  </Button>
                </children>
             </VBox>
          </children>

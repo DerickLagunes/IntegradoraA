@@ -102,4 +102,39 @@ public class AlumnoDao {
         return false;
     }
 
+    //Función de borrado (D) del CRUD
+    public boolean deleteAlumno(int id){
+        boolean seBorro = false;
+        String query = "DELETE FROM alumno WHERE id=?";
+        try{
+            Connection conn = OracleDatabaseConnectionManager.getConnection();
+            PreparedStatement ps = conn.prepareStatement(query);
+            ps.setInt(1, id);
+            if(ps.executeUpdate() > 0){
+                return true;
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+        return seBorro;
+    }
+
+
+    public boolean deleteLogicoAlumno(int id){
+        boolean seBorro = false;
+        String query = "UPDATE alumno SET estado=? WHERE id=?";
+        try{
+            Connection conn = OracleDatabaseConnectionManager.getConnection();
+            PreparedStatement ps = conn.prepareStatement(query);
+            ps.setBoolean(1, false);
+            ps.setInt(2, id);
+            if(ps.executeUpdate() > 0){
+                return true;
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+        return seBorro;
+    }
+
 }
